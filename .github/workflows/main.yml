@@ -1,0 +1,25 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Pyweb
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Azure WebApp
+      uses: Azure/webapps-deploy@v2
+      with:
+        # Name of the Azure Web App
+        app-name: 
+        # Applies to Web App only: Path to package or folder. *.zip, *.war, *.jar or a folder to deploy
+        # Enter the start up command. For ex. dotnet run or dotnet run
+        startup-command: python pyweb.py
