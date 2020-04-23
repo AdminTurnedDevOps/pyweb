@@ -18,6 +18,10 @@ jobs:
     - uses: azure/login@v1
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
+      
+    - run: |
+        az appservice plan create -g Dev10 -n pywebplan
+        az webapp create -g Dev10 -p pywebplan -n pyweb
 
     - name: Azure WebApp
       uses: Azure/webapps-deploy@v2
