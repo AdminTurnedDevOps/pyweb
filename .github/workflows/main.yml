@@ -30,6 +30,3 @@ jobs:
       uses: Azure/webapps-deploy@v2
       with:
         app-name: pyweb
-        # Applies to Web App only: Path to package or folder. *.zip, *.war, *.jar or a folder to deploy
-        # Enter the start up command. For ex. dotnet run or dotnet run
-        # startup-command: python pyweb.py
