@@ -1,5 +1,6 @@
 name: Pyweb
 
+# on: push can also be used if you want to run the GitHub Actions pipeline when any branch is pushed to
 on:
   push:
     branches: [ master ]
