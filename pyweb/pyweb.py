@@ -9,4 +9,4 @@ def home():
     return 'Hello, CloudDev Friends!'
 
 
-pyweb.run(host=0.0.0.0, port=5000)
+pyweb.run()
